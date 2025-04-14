@@ -3,247 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - MUKTIVATM</title>
+    <title>Contact Us - MUKTIVATM Tax & Finance Consultancy</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Flatpickr for date/time picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Keep Flatpickr if the booking form uses it, otherwise remove -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Favicon Links -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        /* Add specific styles for form layout if needed */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 992px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+        .form-wrapper {
+            background: var(--white-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-family: var(--body-font);
+            transition: border-color var(--transition-speed) ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .map-container iframe {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
+    <!-- Header Section (Standardized) -->
+    <header class="site-header sticky-header">
+        <div class="container header-container">
             <div class="logo">
-                <h1>MUKTIVATM</h1>
-                <p>Tax & Finance Consultancy</p>
+                <a href="index.html">
+                    <h1>MUKTIVATM</h1>
+                    <span>Tax & Finance Consultancy</span>
+                </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+                <i class="fas fa-times" style="display: none;"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our expert team for consultations and inquiries</p>
-        </div>
-    </section>
+    <main>
 
-    <!-- Contact Information Section -->
-    <section class="contact-info-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Contact Information</h2>
-                <p>Reach out to us through any of these channels</p>
+        <!-- Page Banner -->
+        <section class="page-banner hero section-padding text-center animate-on-scroll" data-animation="fade-in" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/contact-us.jpg') no-repeat center center; background-size: cover;">
+            <div class="container">
+                <h1 class="hero-title text-white">Contact Us</h1>
+                <p class="hero-subtitle text-white">Get in touch with our expert team for consultations and inquiries.</p>
             </div>
-            <div class="contact-info-grid">
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Office Location</h3>
-                    <p>123 Finance Street, Business District</p>
-                    <p>Surat, Gujarat 395007</p>
-                </div>
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone Numbers</h3>
-                    <p>Main: <a href="tel:+9157541444">+9157541444</a></p>
-                    <p>Support: <a href="tel:+916356577379">+91 6356 577 379</a></p>
-                    <p>WhatsApp: <a href="https://wa.me/9157541444">+9157541444</a></p>
-                </div>
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Addresses</h3>
-                    <p>Support: <a href="mailto:muktivatm@gmail.com">muktivatm@gmail.com</a></p>
-                    <p>Bookings: <a href="mailto:muktivatm@gmail.com">muktivatm@gmail.com</a></p>
-                </div>
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <h3>Social Media</h3>
-                    <p><i class="fab fa-facebook-f"></i> <a href="#">Facebook</a></p>
-                    <p><i class="fab fa-twitter"></i> <a href="#">Twitter</a></p>
-                    <p><i class="fab fa-linkedin-in"></i> <a href="#">LinkedIn</a></p>
-                    <p><i class="fab fa-instagram"></i> <a href="#">Instagram</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Form & Booking Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-form-container">
-                <div class="contact-form-wrapper">
-                    <div class="section-header">
-                        <h2>Send Us a Message</h2>
-                        <p>Fill out the form below and we'll get back to you shortly</p>
+        <!-- Contact Information Section -->
+        <section class="contact-info-section section-padding animate-on-scroll" data-animation="fade-in-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Contact Information</h2>
+                    <p class="section-subtitle">Reach out to us through any of these channels.</p>
+                </div>
+                <div class="contact-info-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="contact-info-card card text-center animate-on-scroll" data-animation="zoom-in" data-delay="100">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                        </div>
+                        <h3 class="card-title">Office Location</h3>
+                        <p>Surat, Gujarat, India</p>
+                        <a href="#map-section" class="link-arrow mt-2">View Map <i class="fas fa-arrow-down"></i></a>
                     </div>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                    <div class="contact-info-card card text-center animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-phone fa-2x"></i>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div id="booking-form" class="booking-form-wrapper">
-                    <div class="section-header">
-                        <h2>Book a Consultation</h2>
-                        <p>Schedule a session with our tax and finance experts</p>
+                        <h3 class="card-title">Phone / WhatsApp</h3>
+                        <p>Call: <a href="tel:+919157541444" class="footer-link">+91 91575 41444</a></p>
+                        <p>WhatsApp: <a href="https://wa.me/919157541444" target="_blank" class="footer-link">+91 91575 41444</a></p>
                     </div>
-                    <form id="bookingForm" class="booking-form">
-                        <div class="form-group">
-                            <label for="bookingName">Full Name</label>
-                            <input type="text" id="bookingName" name="bookingName" required>
+                    <div class="contact-info-card card text-center animate-on-scroll" data-animation="zoom-in" data-delay="300">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-envelope fa-2x"></i>
                         </div>
-                        <div class="form-group">
-                            <label for="bookingEmail">Email Address</label>
-                            <input type="email" id="bookingEmail" name="bookingEmail" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="bookingPhone">Phone Number</label>
-                            <input type="tel" id="bookingPhone" name="bookingPhone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="serviceType">Service Type</label>
-                            <select id="serviceType" name="serviceType" required>
-                                <option value="">Select a Service</option>
-                                <option value="tax-planning">Tax Planning & Preparation</option>
-                                <option value="financial-advisory">Financial Advisory</option>
-                                <option value="business-consulting">Business Consulting</option>
-                                <option value="audit-assurance">Audit & Assurance</option>
-                                <option value="retirement-planning">Retirement Planning</option>
-                                <option value="estate-planning">Estate Planning</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="appointmentDate">Preferred Date</label>
-                            <input type="text" id="appointmentDate" name="appointmentDate" class="datepicker" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="appointmentTime">Preferred Time</label>
-                            <select id="appointmentTime" name="appointmentTime" required>
-                                <option value="">Select a Time</option>
-                                <option value="9:00">9:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                <option value="13:00">1:00 PM</option>
-                                <option value="14:00">2:00 PM</option>
-                                <option value="15:00">3:00 PM</option>
-                                <option value="16:00">4:00 PM</option>
-                                <option value="17:00">5:00 PM</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-secondary">Book Consultation</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.67289598442!2d72.68220547431642!3d21.159440500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5m2!1sen!2sin!4v1698765432123!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Need Immediate Assistance?</h2>
-                <p>Call us now at +9157541444 for urgent inquiries</p>
-                <a href="tel:+9157541444" class="btn btn-primary">Call Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>MUKTIVATM</h3>
-                    <p>Tax & Finance Consultancy</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="services.html#tax-planning">Tax Planning & Preparation</a></li>
-                        <li><a href="services.html#financial-advisory">Financial Advisory</a></li>
-                        <li><a href="services.html#business-consulting">Business Consulting</a></li>
-                        <li><a href="services.html#audit-assurance">Audit & Assurance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Finance Street, Business District, Surat, Gujarat 395007</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+9157541444">+9157541444</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:muktivatm@gmail.com">muktivatm@gmail.com</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9157541444">WhatsApp Chat</a></li>
-                        <li><i class="fas fa-calendar-alt"></i> <a href="contact.html#booking-form">Book a Session</a></li>
-                    </ul>
-                    <div class="social-icons">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <h3 class="card-title">Email Address</h3>
+                        <p><a href="mailto:muktivatm@gmail.com" class="footer-link">muktivatm@gmail.com</a></p>
+                        <p>(General Inquiries & Bookings)</p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 MUKTIVATM. All Rights Reserved.</p>
+        </section>
+
+        <!-- Contact Form & Booking Section -->
+        <section class="contact-form-section section-padding bg-light animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="form-grid">
+                    <div class="form-wrapper animate-on-scroll" data-animation="fade-in-right">
+                        <div class="section-header text-center">
+                            <h2 class="section-title">Send Us a Message</h2>
+                            <p class="section-subtitle">Fill out the form below, and we'll get back to you shortly.</p>
+                        </div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="text-danger">*</span></label>
+                                <input type="text" id="subject" name="subject" required placeholder="Reason for contacting us">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="text-danger">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Enter your message here..."></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                        <div id="form-status" class="mt-4"></div>
+                    </div>
+
+                    <div id="booking-form" class="form-wrapper animate-on-scroll" data-animation="fade-in-left">
+                        <div class="section-header text-center">
+                            <h2 class="section-title">Book a Consultation</h2>
+                            <p class="section-subtitle">Schedule a session with our tax and finance experts.</p>
+                        </div>
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="bookingName">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" id="bookingName" name="bookingName" required placeholder="Your Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" id="bookingEmail" name="bookingEmail" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPhone">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" id="bookingPhone" name="bookingPhone" required placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceType">Service Interested In <span class="text-danger">*</span></label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="" disabled selected>-- Select a Service --</option>
+                                    <option value="tax-planning">Tax Planning & Preparation</option>
+                                    <option value="financial-advisory">Financial Advisory</option>
+                                    <option value="business-consulting">Business Consulting</option>
+                                    <option value="audit-assurance">Audit & Assurance</option>
+                                    <option value="other">Other (Please specify below)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingDate">Preferred Date <span class="text-danger">*</span></label>
+                                <input type="text" id="bookingDate" name="bookingDate" class="flatpickr" required placeholder="Select a Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingTime">Preferred Time <span class="text-danger">*</span></label>
+                                <select id="bookingTime" name="bookingTime" required>
+                                    <option value="" disabled selected>-- Select a Time --</option>
+                                    <option value="09:00">9:00 AM - 10:00 AM</option>
+                                    <option value="10:00">10:00 AM - 11:00 AM</option>
+                                    <option value="11:00">11:00 AM - 12:00 PM</option>
+                                    <option value="13:00">1:00 PM - 2:00 PM</option>
+                                    <option value="14:00">2:00 PM - 3:00 PM</option>
+                                    <option value="15:00">3:00 PM - 4:00 PM</option>
+                                    <option value="16:00">4:00 PM - 5:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingNotes">Additional Notes (Optional)</label>
+                                <textarea id="bookingNotes" name="bookingNotes" rows="3" placeholder="Any specific details?"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary btn-lg">Request Booking</button>
+                            </div>
+                        </form>
+                         <div id="booking-status" class="mt-4"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map-section" class="map-section section-padding animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="section-header text-center">
+                     <h2 class="section-title">Find Us Here</h2>
+                     <p class="section-subtitle">Visit our office located in Surat, Gujarat.</p>
+                 </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.67289598442!2d72.68220547431642!3d21.159440500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1698765432123!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Standardized Footer -->
+        <footer class="site-footer bg-dark text-light section-padding">
+            <div class="container">
+                <div class="footer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="footer-column footer-about">
+                        <h3 class="footer-logo">MUKTIVATM</h3>
+                        <p class="footer-tagline">Tax & Finance Consultancy</p>
+                        <p class="mt-4">Providing expert financial guidance and tax solutions with integrity and precision.</p>
+                    </div>
+                    <div class="footer-column footer-links">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html" class="footer-link">Home</a></li>
+                            <li><a href="services.html" class="footer-link">Services</a></li>
+                            <li><a href="about.html" class="footer-link">About Us</a></li>
+                            <li><a href="contact.html" class="footer-link">Contact</a></li>
+                            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column footer-services">
+                        <h4 class="footer-heading">Our Services</h4>
+                        <ul class="footer-list">
+                            <li><a href="services.html#tax-planning" class="footer-link">Tax Planning</a></li>
+                            <li><a href="services.html#financial-advisory" class="footer-link">Financial Advisory</a></li>
+                            <li><a href="services.html#business-consulting" class="footer-link">Business Consulting</a></li>
+                            <li><a href="services.html#audit-assurance" class="footer-link">Audit & Assurance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column footer-contact">
+                        <h4 class="footer-heading">Contact Us</h4>
+                        <ul class="footer-list contact-details">
+                            <li><i class="fas fa-map-marker-alt mr-2"></i> Surat, Gujarat, India</li>
+                            <li><i class="fas fa-phone mr-2"></i> <a href="tel:+919157541444" class="footer-link">+91 91575 41444</a></li>
+                            <li><i class="fas fa-envelope mr-2"></i> <a href="mailto:muktivatm@gmail.com" class="footer-link">muktivatm@gmail.com</a></li>
+                        </ul>
+                        <div class="social-icons mt-4">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center mt-8 pt-8 border-t border-gray-700">
+                    <p>&copy; <span id="current-year"></span> MUKTIVATM. All Rights Reserved. | Designed with <i class="fas fa-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
