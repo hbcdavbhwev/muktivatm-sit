@@ -3,140 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - MUKTIVATM</title>
+    <title>About Us - MUKTIVATM Tax & Finance Consultancy</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon Links -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
+    <!-- Header Section (Standardized) -->
+    <header class="site-header sticky-header">
+        <div class="container header-container">
             <div class="logo">
-                <h1>MUKTIVATM</h1>
-                <p>Tax & Finance Consultancy</p>
+                <a href="index.html">
+                    <h1>MUKTIVATM</h1>
+                    <span>Tax & Finance Consultancy</span>
+                </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+                <i class="fas fa-times" style="display: none;"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Your Trusted Partner in Financial Success</p>
-        </div>
-    </section>
+    <main>
 
-    <!-- About Content Section -->
-    <section class="about-content">
-        <div class="container">
-            <div class="about-intro">
-                <h3>Welcome to MUKTIVATM</h3>
-                <p>At MUKTIVATM, we believe that financial clarity leads to financial freedom. Founded with a mission to simplify taxation and investment for every Indian, we provide reliable, transparent, and personalized financial services.</p>
-                <p>Our team brings practical experience and a deep understanding of tax laws, government compliance, and investment strategies. Whether you're a salaried individual, small business owner, or freelancer—we offer guidance that fits your goals.</p>
-                <p>We don't just file returns or suggest investments—we build long-term financial relationships based on trust, ethics, and results.</p>
+        <!-- Page Banner -->
+        <section class="page-banner hero section-padding text-center animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <h1 class="hero-title">About MUKTIVATM</h1>
+                <p class="hero-subtitle">Your Trusted Partner in Financial Success.</p>
             </div>
+        </section>
 
-            <div class="vision-section">
-                <h3>Our Vision</h3>
-                <p>To be India's most trusted partner for tax and investment solutions.</p>
-            </div>
-
-            <div class="values-section">
-                <h3>Our Core Values</h3>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Transparency</h4>
-                        <p>We believe in clear communication and complete disclosure in all our dealings.</p>
+        <!-- About Content Section -->
+        <section class="about-content-section section-padding animate-on-scroll" data-animation="fade-in-up">
+            <div class="container">
+                <div class="about-intro grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="about-text animate-on-scroll" data-animation="fade-in-right">
+                        <h2 class="section-title text-left" style="margin-bottom: 1.5rem;">Welcome to MUKTIVATM</h2>
+                        <p>At MUKTIVATM, we believe that financial clarity leads to financial freedom. Founded with a mission to simplify taxation and investment for every Indian, we provide reliable, transparent, and personalized financial services.</p>
+                        <p class="mt-4">Our team brings practical experience and a deep understanding of tax laws, government compliance, and investment strategies. Whether you're a salaried individual, small business owner, or freelancer—we offer guidance that fits your goals.</p>
+                        <p class="mt-4">We don't just file returns or suggest investments—we build long-term financial relationships based on trust, ethics, and tangible results.</p>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Accuracy</h4>
-                        <p>We maintain the highest standards of precision in our financial services.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Affordability</h4>
-                        <p>We provide quality services at competitive rates to ensure value for money.</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Personalized Service</h4>
-                        <p>We tailor our solutions to meet your unique financial needs and goals.</p>
+                    <div class="about-image animate-on-scroll" data-animation="fade-in-left">
+                         <img src="images/about-us.jpg" alt="Modern office interior or professional team photo for MUKTIVATM" class="rounded shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>MUKTIVATM</h3>
-                    <p>Tax & Finance Consultancy</p>
+        <!-- Vision & Mission Section -->
+        <section class="vision-mission-section section-padding bg-light animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="vision-content text-center animate-on-scroll" data-animation="zoom-in" data-delay="100">
+                        <i class="fas fa-eye fa-3x text-primary mb-4"></i>
+                        <h3 class="section-title">Our Vision</h3>
+                        <p class="section-subtitle">To be India's most trusted and accessible partner for comprehensive tax and investment solutions, empowering financial well-being for all.</p>
+                    </div>
+                    <div class="mission-content text-center animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                        <i class="fas fa-bullseye fa-3x text-primary mb-4"></i>
+                        <h3 class="section-title">Our Mission</h3>
+                        <p class="section-subtitle">To provide expert, ethical, and personalized financial guidance, simplifying complexities and fostering long-term client relationships built on transparency and results.</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="values-section section-padding animate-on-scroll" data-animation="fade-in-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Core Values</h2>
+                    <p class="section-subtitle">The principles that guide our work every day.</p>
+                </div>
+                <div class="values-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="100">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-glasses fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Transparency</h3>
+                        <p class="feature-text">Clear communication and complete disclosure in all our dealings.</p>
+                    </div>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-crosshairs fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Accuracy</h3>
+                        <p class="feature-text">Maintaining the highest standards of precision in our financial services.</p>
+                    </div>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="300">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Integrity</h3>
+                        <p class="feature-text">Upholding the highest ethical standards in every client interaction.</p>
+                    </div>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="400">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-handshake-angle fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Client-Centric</h3>
+                        <p class="feature-text">Tailoring solutions to meet unique financial needs and goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- CTA Section (Standardized) -->
+        <section class="cta-section section-padding bg-primary text-white text-center animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title text-3xl md:text-4xl font-semibold mb-4">Ready to Discuss Your Financial Goals?</h2>
+                    <p class="cta-text mb-8 text-lg">Let our experts help you navigate your financial journey.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Standardized) -->
+    <footer class="site-footer bg-dark text-light section-padding">
+        <div class="container">
+            <div class="footer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="footer-column footer-about">
+                    <h3 class="footer-logo">MUKTIVATM</h3>
+                    <p class="footer-tagline">Tax & Finance Consultancy</p>
+                    <p class="mt-4">Providing expert financial guidance and tax solutions with integrity and precision.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-services">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="services.html#tax-planning">Tax Planning & Preparation</a></li>
-                        <li><a href="services.html#financial-advisory">Financial Advisory</a></li>
-                        <li><a href="services.html#business-consulting">Business Consulting</a></li>
-                        <li><a href="services.html#audit-assurance">Audit & Assurance</a></li>
+                <div class="footer-column footer-services">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-list">
+                        <li><a href="services.html#tax-planning" class="footer-link">Tax Planning</a></li>
+                        <li><a href="services.html#financial-advisory" class="footer-link">Financial Advisory</a></li>
+                        <li><a href="services.html#business-consulting" class="footer-link">Business Consulting</a></li>
+                        <li><a href="services.html#audit-assurance" class="footer-link">Audit & Assurance</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Surat, Gujarat</li>
-                        <li><i class="fas fa-phone"></i> +919157541444</li>
-                        <li><i class="fas fa-envelope"></i> muktivatm@gmail.com</li>
+                <div class="footer-column footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-list contact-details">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Surat, Gujarat, India</li>
+                        <li><i class="fas fa-phone mr-2"></i> <a href="tel:+919157541444" class="footer-link">+91 91575 41444</a></li>
+                        <li><i class="fas fa-envelope mr-2"></i> <a href="mailto:muktivatm@gmail.com" class="footer-link">muktivatm@gmail.com</a></li>
                     </ul>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 MUKTIVATM. All Rights Reserved.</p>
+            <div class="footer-bottom text-center mt-8 pt-8 border-t border-gray-700">
+                <p>&copy; <span id="current-year"></span> MUKTIVATM. All Rights Reserved. | Designed with <i class="fas fa-heart text-primary"></i></p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
 </body>
 </html>
