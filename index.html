@@ -3,194 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUKTIVATM - Tax & Finance Consultancy</title>
+    <title>MUKTIVATM - Modern Tax & Finance Consultancy</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon Links -->
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- Standard Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- Apple Touch Icon -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- Optional: PWA Manifest -->
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="container">
+    <header class="site-header sticky-header">
+        <div class="container header-container">
             <div class="logo">
-                <h1>MUKTIVATM</h1>
-                <p>Tax & Finance Consultancy</p>
+                <a href="index.html">
+                    <h1>MUKTIVATM</h1>
+                    <span>Tax & Finance Consultancy</span>
+                </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+                <i class="fas fa-times" style="display: none;"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Expert Tax & Financial Solutions</h2>
-                <p>Helping individuals and businesses navigate complex financial landscapes with confidence</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get a Consultation</a>
-                    <a href="services.html" class="btn btn-secondary">Our Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <!-- Services Overview Section -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive tax and financial solutions tailored to your needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-calculator"></i>
+        <!-- Hero Section -->
+        <section class="hero section-padding animate-on-scroll" data-animation="fade-in-up">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Expert Tax & Financial Solutions</h2>
+                    <p class="hero-subtitle">Helping individuals and businesses navigate complex financial landscapes with confidence.</p>
+                    <div class="hero-buttons button-group">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Get a Consultation</a>
+                        <a href="services.html" class="btn btn-secondary btn-lg">Our Services</a>
                     </div>
-                    <h3>Tax Planning & Preparation</h3>
-                    <p>Strategic tax planning and accurate preparation for individuals and businesses</p>
-                    <a href="services.html#tax-planning" class="read-more">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Financial Advisory</h3>
-                    <p>Expert guidance for investments, retirement planning, and wealth management</p>
-                    <a href="services.html#financial-advisory" class="read-more">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Business Consulting</h3>
-                    <p>Comprehensive business solutions including accounting, payroll, and compliance</p>
-                    <a href="services.html#business-consulting" class="read-more">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3>Audit & Assurance</h3>
-                    <p>Independent audit services to ensure financial accuracy and compliance</p>
-                    <a href="services.html#audit-assurance" class="read-more">Learn More</a>
                 </div>
             </div>
-            <div class="services-cta">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose MUKTIVATM</h2>
-                <p>We deliver excellence in every aspect of our service</p>
+        <!-- Services Overview Section -->
+        <section class="services-overview section-padding bg-light animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Core Services</h2>
+                    <p class="section-subtitle">Comprehensive tax and financial solutions tailored to your needs.</p>
+                </div>
+                <div class="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="service-card card animate-on-scroll" data-animation="fade-in-up" data-delay="100">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="card-title">Tax Planning & Preparation</h3>
+                        <p class="card-text">Strategic tax planning and accurate preparation for individuals and businesses.</p>
+                        <a href="services.html#tax-planning" class="card-link link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card card animate-on-scroll" data-animation="fade-in-up" data-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="card-title">Financial Advisory</h3>
+                        <p class="card-text">Expert guidance for investments, retirement planning, and wealth management.</p>
+                        <a href="services.html#financial-advisory" class="card-link link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card card animate-on-scroll" data-animation="fade-in-up" data-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-landmark fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="card-title">Business Consulting</h3>
+                        <p class="card-text">Comprehensive business solutions including accounting, payroll, and compliance.</p>
+                        <a href="services.html#business-consulting" class="card-link link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card card animate-on-scroll" data-animation="fade-in-up" data-delay="400">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="card-title">Audit & Assurance</h3>
+                        <p class="card-text">Independent audit services to ensure financial accuracy and compliance.</p>
+                        <a href="services.html#audit-assurance" class="card-link link-arrow">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="services-cta text-center mt-12">
+                    <a href="services.html" class="btn btn-primary btn-lg">View All Services</a>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Expert Team</h3>
-                    <p>Certified professionals with years of industry experience</p>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us section-padding animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Why Choose MUKTIVATM?</h2>
+                    <p class="section-subtitle">We deliver excellence, trust, and results.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
+                <div class="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="100">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-user-tie fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Expert Team</h3>
+                        <p class="feature-text">Certified professionals bringing years of specialized industry experience.</p>
                     </div>
-                    <h3>Personalized Approach</h3>
-                    <p>Tailored solutions that address your unique financial needs</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-handshake fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Personalized Approach</h3>
+                        <p class="feature-text">Custom-tailored solutions designed to meet your unique financial needs.</p>
                     </div>
-                    <h3>Confidentiality</h3>
-                    <p>Your financial information is always secure with us</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="300">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Utmost Confidentiality</h3>
+                        <p class="feature-text">Your financial information is handled with the highest level of security and privacy.</p>
                     </div>
-                    <h3>Timely Service</h3>
-                    <p>We respect deadlines and deliver results on time</p>
+                    <div class="feature text-center animate-on-scroll" data-animation="zoom-in" data-delay="400">
+                        <div class="feature-icon icon-circle bg-primary-light text-primary mb-4">
+                            <i class="fas fa-stopwatch fa-2x"></i>
+                        </div>
+                        <h3 class="feature-title">Timely & Reliable</h3>
+                        <p class="feature-text">We value your time, respecting deadlines and delivering results efficiently.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Optimize Your Financial Future?</h2>
-                <p>Schedule a consultation with our experts today</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+        <!-- Testimonials Section (Example - Add if desired) -->
+        <!-- <section class="testimonials section-padding bg-light animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Building trust through proven results.</p>
+                </div>
+                 Testimonial slider or grid here
             </div>
-        </div>
-    </section>
+        </section> -->
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding bg-primary text-white text-center animate-on-scroll" data-animation="fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title text-3xl md:text-4xl font-semibold mb-4">Ready to Optimize Your Financial Future?</h2>
+                    <p class="cta-text mb-8 text-lg">Schedule a complimentary consultation with our expert team today.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer bg-dark text-light section-padding">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>MUKTIVATM</h3>
-                    <p>Tax & Finance Consultancy</p>
+            <div class="footer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="footer-column footer-about">
+                    <h3 class="footer-logo">MUKTIVATM</h3>
+                    <p class="footer-tagline">Tax & Finance Consultancy</p>
+                    <p class="mt-4">Providing expert financial guidance and tax solutions with integrity and precision.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="footer-column footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-services">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="services.html#tax-planning">Tax Planning & Preparation</a></li>
-                        <li><a href="services.html#financial-advisory">Financial Advisory</a></li>
-                        <li><a href="services.html#business-consulting">Business Consulting</a></li>
-                        <li><a href="services.html#audit-assurance">Audit & Assurance</a></li>
+                <div class="footer-column footer-services">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-list">
+                        <li><a href="services.html#tax-planning" class="footer-link">Tax Planning & Preparation</a></li>
+                        <li><a href="services.html#financial-advisory" class="footer-link">Financial Advisory</a></li>
+                        <li><a href="services.html#business-consulting" class="footer-link">Business Consulting</a></li>
+                        <li><a href="services.html#audit-assurance" class="footer-link">Audit & Assurance</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Surat, Gujarat</li>
-                        <li><i class="fas fa-phone"></i> +919157541444</li>
-                        <li><i class="fas fa-envelope"></i> muktivatm@gmail.com</li>
+                <div class="footer-column footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-list contact-details">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Surat, Gujarat, India</li>
+                        <li><i class="fas fa-phone mr-2"></i> <a href="tel:+919157541444" class="footer-link">+91 91575 41444</a></li>
+                        <li><i class="fas fa-envelope mr-2"></i> <a href="mailto:muktivatm@gmail.com" class="footer-link">muktivatm@gmail.com</a></li>
                     </ul>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 MUKTIVATM. All Rights Reserved.</p>
+            <div class="footer-bottom text-center mt-8 pt-8 border-t border-gray-700">
+                <p>&copy; <span id="current-year"></span> MUKTIVATM. All Rights Reserved. | Designed with <i class="fas fa-heart text-primary"></i></p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button (Optional) -->
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
